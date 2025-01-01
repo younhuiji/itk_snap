@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ContrastInspector</class>
+ <widget class="QWidget" name="ContrastInspector">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>454</width>
+    <height>561</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox {
+  background-origin: content;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: palette(midlight);
+  padding: 5px;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(128,128,128);
+}
+
+QGroupBox::title {
+  subcontrol-origin: 	margin;
+  subcontrol-position: top left;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>18</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="grpWindow">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="title">
+      <string>Linear Image Contrast Adjustment:</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="margin" stdset="0">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_8" native="true">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="horizontalSpacing">
+          <number>12</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>6</number>
+         </property>
+         <property name="margin" stdset="0">
+          <number>6</number>
+         </property>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Window:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QDoubleSpinBox" name="inWindow">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>64</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="decimals">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QToolButton" name="btnAuto">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Auto</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Minimum:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QToolButton" name="btnReset">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="inMin">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>64</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::FocusPolicy::WheelFocus</enum>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="decimals">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="4">
+          <widget class="QDoubleSpinBox" name="inLevel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>64</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::FocusPolicy::WheelFocus</enum>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="decimals">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Maximum:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="inMax">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>64</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::FocusPolicy::WheelFocus</enum>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+           </property>
+           <property name="keyboardTracking">
+            <bool>false</bool>
+           </property>
+           <property name="decimals">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Level:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>5</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpCurve">
+     <property name="title">
+      <string>Curve-Based Image Contrast Adjustment:</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="margin" stdset="0">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>202</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="margin" stdset="0">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QtVTKRenderWindowBox" name="plotWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:white;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>4</number>
+         </property>
+         <property name="margin" stdset="0">
+          <number>0</number>
+         </property>
+         <item row="1" column="1">
+          <widget class="QWidget" name="widget_2" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="margin" stdset="0">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>x:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="inControlX">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>The x-coordinate of the selected control point. The x-coordinate represents input image intensity.</string>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+              </property>
+              <property name="keyboardTracking">
+               <bool>false</bool>
+              </property>
+              <property name="decimals">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QWidget" name="widget_3" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="margin" stdset="0">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>y:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="inControlY">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>The y-coordinate of the selected control point. The y-coordinate represents the index into the color map used to display the image. Its values are in the range [0 1].</string>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+              </property>
+              <property name="keyboardTracking">
+               <bool>false</bool>
+              </property>
+              <property name="decimals">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <widget class="QWidget" name="widget_4" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="margin" stdset="0">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Selected control point:</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QWidget" name="widget_6" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="margin" stdset="0">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>Id:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="inControlId">
+              <property name="maximumSize">
+               <size>
+                <width>48</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Index of the selected control point</string>
+              </property>
+              <property name="keyboardTracking">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QWidget" name="widget_7" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <property name="margin" stdset="0">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QToolButton" name="btnAddControl">
+              <property name="toolTip">
+               <string>Increase the number of control points on the curve</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/root/icons8_plus_16.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnRemoveControl">
+              <property name="toolTip">
+               <string>Decrease the number of control points on the curve</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/root/icons8_no_entry_16.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpHistogram">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Histogram Display Options:</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="margin" stdset="0">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Bin size:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="inBinSize">
+        <property name="keyboardTracking">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>5</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Cutoff:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="inCutoff">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>80</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="suffix">
+         <string> %</string>
+        </property>
+        <property name="decimals">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>5</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="inLogScale">
+        <property name="text">
+         <string>Log scale</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_5" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnContrastActions">
+        <property name="contextMenuPolicy">
+         <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+        </property>
+        <property name="text">
+         <string>Actions ...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+  <action name="actionHistogram_display_preferences">
+   <property name="text">
+    <string>Histogram display preferences ...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QtVTKRenderWindowBox</class>
+   <extends>QWidget</extends>
+   <header location="global">QtVTKRenderWindowBox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>inMin</tabstop>
+  <tabstop>inMax</tabstop>
+  <tabstop>inLevel</tabstop>
+  <tabstop>inWindow</tabstop>
+  <tabstop>btnReset</tabstop>
+  <tabstop>btnAuto</tabstop>
+  <tabstop>inControlId</tabstop>
+  <tabstop>inControlX</tabstop>
+  <tabstop>inControlY</tabstop>
+  <tabstop>btnAddControl</tabstop>
+  <tabstop>inBinSize</tabstop>
+  <tabstop>inCutoff</tabstop>
+  <tabstop>inLogScale</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
